@@ -1,0 +1,90 @@
+@import url('https://fonts.cdnfonts.com/css/transponder-aoe');
+html, body {
+    height: 100%;
+    -webkit-user-select: none; /* Safari 3.1+  */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none;  /* IE 18+ */
+    user-select: none; /* Standard syntax */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background: rgb(194, 206, 219);
+    background: linear-gradient(205deg, rgb(238 233 245) 0%, rgb(30 34 42) 100%);
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: monospace;
+    color: #aaa;
+    padding: 10px;
+    font-size: 12px;
+}
+#noise-svg{
+    height: 100%;
+    width: 100%;
+    opacity: 0.1;
+}
+#noise-rect{
+    width: 100vw;
+    height: 100vh;
+}
+
+.outer-rin,
+.outer-rim *{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: linear-gradient(205deg, rgb(69 75 85) 0%, rgb(22 25 32) 100%);
+}
+.outer-rim{
+    --init-size: min(min(712px, 90vw) , 90vh);
+    width: var(--init-size);
+    height: var(--init-size);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: -40px 40px 30px 10px rgb(0, 0, 0, 0.4),
+        -80px 80px 40px 10px rgb(0, 0, 0, 0.6),
+        -120px 120px 80px 10px rgb(0, 0, 0, 0.6);
+}
+.outer-rim-2 {
+    width: calc(var(--init-size) * 0.97);
+    height: calc(var(--init-size) * 0.97);
+    box-shadow: 2px -2px 2px 0 rgb(108, 115, 129, 0.8),
+    -30px 30px 12px 10px rgb(0, 0, 0, 0.5),
+    inset -2px 2px 2px 0 rgb(108, 115, 129, 0.2),
+    inset 2px -2px 2px 0px rgb(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+.inner-rim{
+    border-radius: 50%;
+    width: calc(var(--init-size) * 0.92);
+    height: calc(var(--init-size) * 0.92);
+    box-shadow: 
+    -2px 2px 2px 0 rgba(108, 115, 129, 0.4),
+    2px -2px 1px 0px rgba(0, 0, 0, 0.2),
+    inset -3px 3px 2px 1px rgba(0, 0, 0, 0.5);
+}
+.outer-window.invert{
+    rotate: 108deg;
+    transform-origin: 50% 80%;
+    scale: 0.99;
+}
+.outer-window {
+    background: none;
+    width: calc(var(--init-size) * 0.83);
+    height: calc(var(--init-size) * 0.83 / 1.7);
+    overflow: hidden;
+    top: 4%;
+    bottom: unset;
+}
+.window {
+    
+}
